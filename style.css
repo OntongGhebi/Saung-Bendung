@@ -1,0 +1,42 @@
+:root {
+    --primary: #004056;
+    --bg: #f3f3f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: var(--bg);
+    color: black;
+
+}
+
+/*Navbar*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(0, 0, 0, 0.05);
+    border-bottom: 1px solid #107da3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo{
+    width: 10rem;
+    height: 15rem;
+
+}
