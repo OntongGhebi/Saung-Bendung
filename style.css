@@ -78,3 +78,73 @@ body {
 #hamburger-menu {
     display: none;
 }
+
+/*Responsive*/
+
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 756px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgb(0, 0, 0, 0.05);
+        width: 20rem;
+        height: 100vh;
+        transition: 0.5s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: rgb(0, 0, 0);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+
+    }
+
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.2);
+
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgb(0, 0, 0);
+        width: 20rem;
+        height: 100vh;
+        transition: 0.5s;
+    }
+}
