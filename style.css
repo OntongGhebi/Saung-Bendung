@@ -79,6 +79,14 @@ body {
     display: none;
 }
 
+/*Hero Section*/
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('Asset/');
+}
 /*Responsive*/
 
 @media (max-width: 1366px) {
