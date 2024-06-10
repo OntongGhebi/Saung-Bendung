@@ -16,7 +16,7 @@ body {
     font-family: 'Libre Baskerville', serif;
     background-color: var(--bg);
     color: black;
-    /*min-height: 750px;--!>
+    min-height: 1500px;
 }
 
 /*Navbar*/
@@ -137,14 +137,21 @@ body {
 }
 
 /*About Section*/
-.about{
-    padding: 4rem 7% 1.4rem;
+.about, .menu {
+    padding: 8rem 7% 1.4rem;
 }
 
-.about h2 {
+.about h2,
+.menu h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 2rem;
     margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.about h2 span,
+.menu h2 span {
+    color: var(--primary);
 }
 
 .about .row {
@@ -161,14 +168,14 @@ body {
 }
 
 .about .row .content {
-    flex: 1 1 50rem;
-    padding: 0 1rem;
+    flex: 1 1 30rem;
+    padding: 0 2rem;
 }
 
 .about .row .content h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 0.8rem;
-    font-weight: 100;
+    font-weight: bold;
     line-height: 1.6rem;
 }
 
@@ -177,6 +184,22 @@ body {
     margin-bottom: 1rem;
 }
 
+/*Menu Section*/
+
+.menu h2 {
+    margin-bottom: 0.2rem;
+}
+
+.menu p {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.4rem;
+}
+
+.menu
 /*Responsive*/
 
 @media (max-width: 1366px) {
@@ -192,6 +215,10 @@ body {
 
     #hamburger-menu {
         display: inline-block;
+    }
+
+    .hero {
+        background-size: auto;
     }
 
     .navbar .navbar-nav {
@@ -223,7 +250,25 @@ body {
 
     .navbar .navbar-nav a:hover::after{
         transform: scaleX(0.2);
+    }
 
+    /*About Section*/
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .content {
+        padding: 0rem;
+    }
+    .about .row .content h3{
+        padding-top: 1rem;
+    }
+
+    .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
@@ -244,5 +289,13 @@ body {
         width: 20rem;
         height: 100vh;
         transition: 0.5s;
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .content {
+        padding-top: 1rem;
     }
 }
