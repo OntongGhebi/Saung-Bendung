@@ -12,11 +12,15 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Libre Baskerville', serif;
     background-color: var(--bg);
     color: black;
-    min-height: 4000px;
+   
 }
 
 /*Navbar*/
@@ -229,13 +233,94 @@ body {
     display: flex;
     margin-top: 2rem;
     background-color: rgb(16, 125, 163, 0.05);
-    flex-wrap: wrap;
+    border-radius: 1rem;
 }
 
 .contact .row .maps {
     flex: 1 1 45rem;
     width: 100%;
     object-fit: cover;
+    border-radius: 1rem;
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+  
+ }
+
+ .contact .row form .input-grup{
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    background-color: var(--bg);
+    border: 1px solid var(--primary);
+    padding-left: 2rem;
+    border-radius: 10px;
+ }
+
+ .contact .row form .input-grup input{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    background: none;
+    color: #000;
+ }
+
+ .contact .row form button{
+    margin-top: 2.5rem;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+    background-color: var(--primary);
+    color: #f3f3f3;
+    cursor: pointer;
+    border-radius: 10px;
+ }
+
+ /*Footer*/
+
+ footer{
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2.5rem;
+    padding-bottom: 2.5rem;
+ }
+
+ footer .sosmed {
+    padding: 1rem 0;
+ }
+
+ footer .sosmed a{
+    color: #f3f3f3;
+    margin: 2rem;
+ }
+
+ footer .sosmed a:hover,
+ footer .links a:hover{
+    color: #030303;
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a{
+    color: #f3f3f3;
+    padding: 0.7rem 1rem;
+    margin-bottom: ;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+    color: #f3f3f3;
+}
+
+footer .credit a{
+    color: #000;
+    font-weight: 700;
 }
 
 /*Responsive*/
@@ -263,7 +348,7 @@ body {
         position: absolute;
         top: 100%;
         right: -100%;
-        background-color: rgb(0, 0, 0, 0.05);
+        background-color: var(--bg);
         width: 20rem;
         height: 100vh;
         transition: 0.5s;
@@ -308,6 +393,18 @@ body {
         object-fit: cover;
         object-position: center;
     }
+
+    .contact .row {
+        flex-wrap: wrap;
+    }
+
+    .contact .row .maps {
+        height: 27rem;
+    }
+
+    .contact .row form{
+        padding-top: 0;
+    }
 }
 
 @media (max-width: 450px) {
@@ -336,4 +433,6 @@ body {
     .about .row .content {
         padding-top: 1rem;
     }
+
+
 }
